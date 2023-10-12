@@ -36,8 +36,7 @@ const HomeLayout = () => {
   const [message, setMessage] = useState<string>("");
 
   // Please update the Access Key in the .env
-  const apiKey =
-    process.env.PUBLIC_ACCESS_KEY || "abc4856b-3af9-4c3f-8f45-17e199dc152b";
+  const apiKey = process.env.PUBLIC_ACCESS_KEY || "";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
