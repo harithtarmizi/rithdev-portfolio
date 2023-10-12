@@ -1,10 +1,10 @@
-import React from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -23,6 +23,7 @@ import web5 from "../../../public/web5.png";
 import web6 from "../../../public/web6.png";
 
 const HomeLayout = () => {
+  const sectionRef = useRef<HTMLDivElement | null>();
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const {
     register,
@@ -38,8 +39,6 @@ const HomeLayout = () => {
   const apiKey: string = process.env.PUBLIC_ACCESS_KEY
     ? process.env.PUBLIC_ACCESS_KEY
     : "abc4856b-3af9-4c3f-8f45-17e199dc152b";
-
-  console.log(process.env.PUBLIC_ACCESS_KEY);
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
@@ -58,6 +57,10 @@ const HomeLayout = () => {
     },
   });
 
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
@@ -72,12 +75,12 @@ const HomeLayout = () => {
                 />
               </li>
               <li>
-                <Link
-                  href="/credentials"
+                <a
+                  onClick={scrollToSection}
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
                 >
-                  Credentials
-                </Link>
+                  Contact now
+                </a>
               </li>
             </ul>
           </nav>
@@ -314,7 +317,7 @@ const HomeLayout = () => {
           </div>
         </section>
 
-        <section>
+        <section ref={sectionRef as React.RefObject<HTMLDivElement>}>
           <h3 className="text-3xl py-1 dark:text-white ">Contact</h3>
           <form onSubmit={handleSubmit(onSubmit)} className="mt-5 pb-10">
             <input
