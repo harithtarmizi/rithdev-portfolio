@@ -6,6 +6,7 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
@@ -23,7 +24,6 @@ import web6 from "../../../public/web6.png";
 
 const HomeLayout = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [result, setResult] = useState<string>("");
   const {
     register,
     handleSubmit,
@@ -35,8 +35,11 @@ const HomeLayout = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
 
-  // Please update the Access Key in the .env
-  const apiKey = process.env.PUBLIC_ACCESS_KEY || "";
+  const apiKey: string = process.env.PUBLIC_ACCESS_KEY
+    ? process.env.PUBLIC_ACCESS_KEY
+    : "abc4856b-3af9-4c3f-8f45-17e199dc152b";
+
+  console.log(process.env.PUBLIC_ACCESS_KEY);
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
@@ -69,12 +72,12 @@ const HomeLayout = () => {
                 />
               </li>
               <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                <Link
                   href="/credentials"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
                 >
                   Credentials
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -311,7 +314,7 @@ const HomeLayout = () => {
           </form>
 
           {isSubmitSuccessful && isSuccess && (
-            <div className="pb-5 text-sm text-center text-green-50">
+            <div className="pb-5 text-sm text-center text-green-500">
               {message || "Success. Message sent successfully"}
             </div>
           )}
