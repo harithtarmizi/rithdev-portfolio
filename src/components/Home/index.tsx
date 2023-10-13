@@ -22,7 +22,7 @@ import web4 from "../../../public/web4.png";
 import web5 from "../../../public/web5.png";
 import web6 from "../../../public/web6.png";
 
-const HomeLayout = () => {
+const Home = () => {
   const sectionRef = useRef<HTMLDivElement | null>();
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const {
@@ -445,4 +445,4 @@ const HomeLayout = () => {
   );
 };
 
-export default HomeLayout;
+export default Home;
