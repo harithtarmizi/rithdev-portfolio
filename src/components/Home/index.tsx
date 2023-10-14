@@ -117,8 +117,9 @@ const Home = () => {
             <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Meet your friendly neighborhood tech wizard! I&rsquo;ve journeyed
-              through the wild startup jungles and establish corporations, and I&rsquo;m here to turn your tech dreams into
-              delightful reality. Whether it&rsquo;s
+              through the wild startup jungles and establish corporations, and
+              I&rsquo;m here to turn your tech dreams into delightful reality.
+              Whether it&rsquo;s
               <span className="text-teal-500"> writing code</span> that grooves
               or bringing
               <span className="text-teal-500"> Augmented Reality(AR) </span>
@@ -207,7 +208,7 @@ const Home = () => {
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
                 >
                   Explore more
                   <svg
@@ -244,7 +245,7 @@ const Home = () => {
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
                 >
                   Explore more
                   <svg
@@ -281,7 +282,7 @@ const Home = () => {
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
                 >
                   Explore more
                   <svg
@@ -388,7 +389,7 @@ const Home = () => {
 
             <button
               type="submit"
-              className="w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black "
+              className="w-full py-4 font-semibold text-white transition-colors bg-gray-600 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black "
             >
               {isSubmitting ? (
                 <svg
@@ -429,6 +430,16 @@ const Home = () => {
           )}
         </section>
       </main>
+
+      <footer className="px-10 md:px-20 lg:px-40 bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-white">
+          © 2023{" "}
+          <Link href="/" className="hover:underline">
+            Rithdev™
+          </Link>
+          . All Rights Reserved.
+        </span>
+      </footer>
     </div>
   );
 };
