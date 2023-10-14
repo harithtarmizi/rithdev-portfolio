@@ -7,14 +7,13 @@ import {
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import deved from "../../../public/dev-ed-wave.png";
-import rith from "../../../public/rith.png";
 import code from "../../../public/code.png";
+import arfilter from "../../../public/arfilter.png";
 import design from "../../../public/design.png";
-import consulting from "../../../public/consulting.png";
 import web1 from "../../../public/web1.png";
 import web2 from "../../../public/web2.png";
 import web3 from "../../../public/web3.png";
@@ -131,12 +130,18 @@ const Home = () => {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={design} width={100} height={100} alt="" />
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:text-white dark:bg-gray-800 dark:border-gray-700 flex-1">
+              <Image
+                src={arfilter}
+                width={100}
+                height={100}
+                alt="ar filter"
+                className="mx-auto"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Instagram Filter
               </h3>
-              <p className="text-gray-800 py-1">
+              <p className="text-gray-800 dark:text-white py-1">
                 Ever wondered what it&rsquo;s like to be a pickle with
                 sunglasses? Or perhaps a disco-loving unicorn? My
                 <span className="text-teal-500"> AR filters</span> will turn
@@ -146,12 +151,18 @@ const Home = () => {
                 Instagram followers.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={code} width={100} height={100} alt="" />
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:text-white dark:bg-gray-800 dark:border-gray-700 flex-1">
+              <Image
+                src={code}
+                width={100}
+                height={100}
+                alt="code"
+                className="mx-auto"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
               </h3>
-              <p className="text-gray-800 py-1">
+              <p className="dark:text-white py-1">
                 I build <span className="text-teal-500">web apps</span> and
                 <span className="text-teal-500"> mobile apps</span> that are so
                 user-friendly, even your grandma can navigate them blindfolded.
@@ -162,12 +173,18 @@ const Home = () => {
                 that&rsquo;s me!
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={consulting} width={100} height={100} alt="" />
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:text-white dark:bg-gray-800 dark:border-gray-700 flex-1">
+              <Image
+                src={design}
+                width={100}
+                height={100}
+                alt="3d design"
+                className="mx-auto"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 3d Character Design
               </h3>
-              <p className="text-gray-800 py-1">
+              <p className="dark:text-white py-1">
                 I&rsquo;m your{" "}
                 <span className="text-teal-500">3D character</span> sorcerer!
                 Whether it&rsquo;s fantastical creatures, quirky characters, or
@@ -194,7 +211,7 @@ const Home = () => {
           <div className="lg:flex gap-20 justify-center">
             <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                <Image className="rounded-t-lg" src={web1} width={900} alt="" />
+                <Image className="rounded-t-lg" src={web1} width={900} alt="ar project" />
               </a>
               <div className="p-5">
                 <a href="#">
@@ -231,7 +248,7 @@ const Home = () => {
             </div>
             <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                <Image className="rounded-t-lg" src={web2} width={900} alt="" />
+                <Image className="rounded-t-lg" src={web2} width={900} alt="software project" />
               </a>
               <div className="p-5">
                 <a href="#">
@@ -268,7 +285,7 @@ const Home = () => {
             </div>
             <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                <Image className="rounded-t-lg" src={web6} width={900} alt="" />
+                <Image className="rounded-t-lg" src={web6} width={900} alt="blender project" />
               </a>
               <div className="p-5">
                 <a href="#">
