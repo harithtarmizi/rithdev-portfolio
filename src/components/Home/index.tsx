@@ -92,7 +92,7 @@ const Home = () => {
               Software Engineer, AR Developer & 3D Modeler
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md-text-xl max-w-xl mx-auto">
-              Freelancer providing services for programming, cutting-edge AR
+              Freelancer providing services for programming, exceptional AR
               experiences, and 3D character design. Join me down below and
               let&rsquo;s get cracking!
             </p>
@@ -116,25 +116,17 @@ const Home = () => {
           <div>
             <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              As a freelance software engineer and AR developer, I&rsquo;ve
-              gained valuable experience working in both
-              <span className="text-teal-500"> startup</span> and{" "}
-              <span className="text-teal-500">corporate (MNC)</span>{" "}
-              environments. My journey includes hands-on roles in software
-              development, project management, and providing solutions for
-              clients. I&rsquo;ve honed my skills in crafting digital products
-              tailored to the unique needs of businesses and consumers. With
-              expertise in software engineering and augmented reality (AR)
-              development, and 3D character modeling, I&rsquo;m well-equipped to
-              deliver innovative solutions for your projects and initiatives.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including{" "}
-              <span className="text-teal-500">
-                augmented reality (AR) development
-              </span>
-              , <span className="text-teal-500">programming</span> and{" "}
-              <span className="text-teal-500">3D modeling</span>.
+              Meet your friendly neighborhood tech wizard! I&rsquo;ve journeyed
+              through the wild startup jungles and establish corporations, and I&rsquo;m here to turn your tech dreams into
+              delightful reality. Whether it&rsquo;s
+              <span className="text-teal-500"> writing code</span> that grooves
+              or bringing
+              <span className="text-teal-500"> Augmented Reality(AR) </span>
+              enchantments to life, I&rsquo;m the one for the job. Oh, and did I
+              mention I moonlight as a
+              <span className="text-teal-500"> 3D character</span> artist? So,
+              let&rsquo;s add some fun and flair to your projects - it&rsquo;s
+              all part of the magic I bring to the digital circus! 🚀🎩🤹‍♂️
             </p>
           </div>
           <div className="lg:flex gap-10">
@@ -143,45 +135,46 @@ const Home = () => {
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Instagram Filter
               </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
+              <p className="text-gray-800 py-1">
+                Ever wondered what it&rsquo;s like to be a pickle with
+                sunglasses? Or perhaps a disco-loving unicorn? My
+                <span className="text-teal-500"> AR filters</span> will turn
+                your selfies into hilarious adventures. Just be careful - you
+                might get addicted to your newfound silliness. Warning: Side
+                effects may include uncontrollable giggles and an increase in
+                Instagram followers.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image src={code} width={100} height={100} alt="" />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
               </h3>
-              <p className="py-2">
-                Do you have an idea for your next great web apps or mobile apps?
-                Let&rsquo;s make it a reality.
+              <p className="text-gray-800 py-1">
+                I build <span className="text-teal-500">web apps</span> and
+                <span className="text-teal-500"> mobile apps</span> that are so
+                user-friendly, even your grandma can navigate them blindfolded.
+                My code is so clean that it makes your favorite cleaning
+                detergent jealous. Expect apps so intuitive, they practically
+                read your mind. Now, when your app works like a charm,
+                don&rsquo;t forget to thank the magical fingers behind it -
+                that&rsquo;s me!
               </p>
-              <h4 className="py-4 text-teal-600">Programming Tools I Use</h4>
-              <p className="text-gray-800 py-1">React/Next Js</p>
-              <p className="text-gray-800 py-1">Node Js</p>
-              <p className="text-gray-800 py-1">Flutter</p>
-              <p className="text-gray-800 py-1">MySQL</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image src={consulting} width={100} height={100} alt="" />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 3d Character Design
               </h3>
-              <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
+              <p className="text-gray-800 py-1">
+                I&rsquo;m your{" "}
+                <span className="text-teal-500">3D character</span> sorcerer!
+                Whether it&rsquo;s fantastical creatures, quirky characters, or
+                epic avatars, I bring them to life in the digital realm. Prepare
+                to meet charming digital companions that&rsquo;ll steal your
+                heart (and maybe your wallet if they could!). Let&rsquo;s turn
+                your character dreams into whimsical reality together!
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
             </div>
           </div>
         </section>
@@ -190,16 +183,11 @@ const Home = () => {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I&rsquo;ve done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              Welcome to my enchanted digital playground, where creativity meets
+              code, and imagination knows no bounds. Explore my world of AR
+              filters, web applications, mobile apps, and 3D character wonders.
+              Get ready to embark on a whimsical journey through the pixels and
+              polygons of my work!
             </p>
           </div>
           <div className="lg:flex gap-20 justify-center">
