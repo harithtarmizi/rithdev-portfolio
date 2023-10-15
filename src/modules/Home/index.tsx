@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
+import useDarkMode from "@/store/darkMode";
 import ProjectCard from "../../components/ProjectCard";
 import Footer from "@/components/Footer";
 import deved from "../../../public/dev-ed-wave.png";
@@ -21,7 +22,7 @@ import design from "../../../public/design.png";
 const Home = () => {
   const contactRef = useRef<HTMLDivElement | null>();
 
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const {
     register,
     handleSubmit,
@@ -81,7 +82,7 @@ const Home = () => {
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
+                  onClick={toggleDarkMode}
                   className="cursor-pointer text-2xl"
                 />
               </li>
@@ -376,7 +377,7 @@ const Home = () => {
         </section>
       </main>
 
-     <Footer />
+      <Footer />
     </div>
   );
 };
