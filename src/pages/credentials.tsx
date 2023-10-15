@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Credential from "@/components/Credential";
+import Credential from "@/components/ProjectCard";
 
 export default function CredentialsPage() {
   return (

@@ -10,13 +10,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
+import ProjectCard from "../ProjectCard";
 import deved from "../../../public/dev-ed-wave.png";
 import code from "../../../public/code.png";
 import arfilter from "../../../public/arfilter.png";
 import design from "../../../public/design.png";
-import web1 from "../../../public/web1.png";
-import web2 from "../../../public/web2.png";
-import web6 from "../../../public/web6.png";
 // import logo from "../../../public/rith.png";
 
 const Home = () => {
@@ -222,132 +220,30 @@ const Home = () => {
             </p>
           </div>
           <div className="lg:flex gap-20 justify-center">
-            <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Link href="/portfolio/augmented-reality">
-                <Image
-                  className="rounded-t-lg"
-                  src={web1}
-                  width={900}
-                  alt="ar project"
-                />
-              </Link>
-              <div className="p-5">
-                <Link href="/portfolio/augmented-reality">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Augmented Reality (AR) Project
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-                <Link
-                  href="/portfolio/augmented-reality"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
-                >
-                  Explore more
-                  <svg
-                    className="w-3.5 h-3.5 ml-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-            <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Link href="/portfolio/software-development">
-                <Image
-                  className="rounded-t-lg"
-                  src={web2}
-                  width={900}
-                  alt="software project"
-                />
-              </Link>
-              <div className="p-5">
-                <Link href="/portfolio/software-development">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Software Development Project
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-                <Link
-                  href="/portfolio/software-development"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
-                >
-                  Explore more
-                  <svg
-                    className="w-3.5 h-3.5 ml-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-            <div className="bg-white border my-10 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Link href="/portfolio/3d-design">
-                <Image
-                  className="rounded-t-lg"
-                  src={web6}
-                  width={900}
-                  alt="blender project"
-                />
-              </Link>
-              <div className="p-5">
-                <Link href="/portfolio/3d-design">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    3D Character Design Project
-                  </h5>
-                </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-                <Link
-                  href="/portfolio/3d-design"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
-                >
-                  Explore more
-                  <svg
-                    className="w-3.5 h-3.5 ml-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+            <ProjectCard
+              linkTo="/portfolio/augmented-reality"
+              imageSrc={"/web1.png"}
+              title="Augmented Reality (AR) Project"
+              description="Here are the biggest enterprise technology acquisitions of
+                  2021 so far, in reverse chronological order."
+              buttonLabel="Explore more"
+            />
+            <ProjectCard
+              linkTo="/portfolio/software-development"
+              imageSrc={"/web2.png"}
+              title="Augmented Reality (AR) Project"
+              description="Here are the biggest enterprise technology acquisitions of
+                  2021 so far, in reverse chronological order."
+              buttonLabel="Explore more"
+            />
+            <ProjectCard
+              linkTo="/portfolio/3d-design"
+              imageSrc={"/web6.png"}
+              title="3D Character Design Project"
+              description="Here are the biggest enterprise technology acquisitions of
+                  2021 so far, in reverse chronological order."
+              buttonLabel="Explore more"
+            />
           </div>
         </section>
 
