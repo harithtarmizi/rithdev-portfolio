@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import useDarkMode from "@/store/darkmode";
+import useDarkMode from "@/store/darkMode";
 import { useRouter } from "next/router";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import logo from "../../../../public/rith.png";
