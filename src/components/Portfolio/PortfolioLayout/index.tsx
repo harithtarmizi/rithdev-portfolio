@@ -1,11 +1,19 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 import logo from "../../../../public/rith.png";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 const PortfolioLayout = ({ children }: { children: ReactNode }) => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const router = useRouter();
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -42,6 +50,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
                 </li>
               </ul>
               <button
+                onClick={toggleMenu}
                 data-collapse-toggle="mega-menu-icons"
                 type="button"
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -68,13 +77,19 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
             </div>
             <div
               id="mega-menu-icons"
-              className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } items-center justify-between  w-full md:flex md:w-auto md:order-1`}
             >
               <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                   <Link
                     href="/portfolio/augmented-reality"
-                    className="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                    className={`block py-2 pl-3 pr-4 text-gray-900 border-b md:border-0 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover-text-gray-700 dark:hover-text-gray-700 dark:hover:bg-gray-700 md:dark:hover-bg-transparent dark:border-gray-700 ${
+                      router.pathname === "/portfolio/augmented-reality"
+                        ? "font-semibold md:border-b-4 "
+                        : ""
+                    }`}
                     aria-current="page"
                   >
                     AR
@@ -84,7 +99,12 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
                 <li>
                   <Link
                     href="/portfolio/software-development"
-                    className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                    className={`block py-2 pl-3 pr-4 text-gray-900 border-b md:border-0 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover-text-gray-700 dark:hover-text-gray-700 dark:hover:bg-gray-700 md:dark:hover-bg-transparent dark:border-gray-700 ${
+                      router.pathname === "/portfolio/software-development"
+                        ? "font-semibold md:border-b-4 "
+                        : ""
+                    }`}
+                    aria-current="page"
                   >
                     Software Development
                   </Link>
@@ -93,7 +113,12 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
                 <li>
                   <Link
                     href="/portfolio/3d-design"
-                    className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                    className={`block py-2 pl-3 pr-4 text-gray-900 border-b md:border-0 border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover-text-gray-700 dark:hover-text-gray-700 dark:hover:bg-gray-700 md:dark:hover-bg-transparent dark:border-gray-700 ${
+                      router.pathname === "/portfolio/3d-design"
+                        ? "font-semibold md:border-b-4 "
+                        : ""
+                    }`}
+                    aria-current="page"
                   >
                     3D Design
                   </Link>
@@ -117,7 +142,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Link
               href="#"
-              className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-gray-600 hover:bg-gray-800 focus:ring-4 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+              className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white dark:text-black rounded-lg bg-gray-600 hover:bg-gray-800 focus:ring-4 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
             >
               Get started
               <svg
