@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import AugmentedReality from "@/components/Portfolio/AugmentedReality";
+import AugmentedReality from "@/modules/Portfolio/AugmentedReality";
 
 export default function ARPage() {
   return (

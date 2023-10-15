@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import ThreeDDesign from "@/components/Portfolio/ThreeDDesign";
+import ThreeDDesign from "@/modules/Portfolio/ThreeDDesign";
 
 export default function ThreeDDesignPage() {
   return (

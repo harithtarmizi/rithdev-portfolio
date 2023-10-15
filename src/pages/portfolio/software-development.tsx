@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import SoftwareDevelopment from "@/components/Portfolio/SoftwareDevelopment";
+import SoftwareDevelopment from "@/modules/Portfolio/SoftwareDevelopment";
 
 export default function SoftwareDevelopmentPage() {
   return (

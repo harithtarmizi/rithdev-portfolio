@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 import useDarkMode from "@/store/darkMode";
 import { useRouter } from "next/router";
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -171,15 +172,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
         </div>
       </section>
 
-      <footer className="fixed px-10 md:px-20 lg:px-40 bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-white">
-          © 2023{" "}
-          <Link href="/" className="hover:underline">
-            Rithdev™
-          </Link>
-          . All Rights Reserved.
-        </span>
-      </footer>
+      <Footer className="fixed" />
     </div>
   );
 };

@@ -10,7 +10,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
-import ProjectCard from "../ProjectCard";
+import ProjectCard from "../../components/ProjectCard";
+import Footer from "@/components/Footer";
 import deved from "../../../public/dev-ed-wave.png";
 import code from "../../../public/code.png";
 import arfilter from "../../../public/arfilter.png";
@@ -375,15 +376,7 @@ const Home = () => {
         </section>
       </main>
 
-      <footer className="px-10 md:px-20 lg:px-40 bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-white">
-          © 2023{" "}
-          <Link href="/" className="hover:underline">
-            Rithdev™
-          </Link>
-          . All Rights Reserved.
-        </span>
-      </footer>
+     <Footer />
     </div>
   );
 };
