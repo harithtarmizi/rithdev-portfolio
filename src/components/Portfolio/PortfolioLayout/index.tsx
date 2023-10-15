@@ -141,7 +141,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Link
-              href="#"
+              href="/#contact"
               className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white dark:text-black rounded-lg bg-gray-600 hover:bg-gray-800 focus:ring-4 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
             >
               Get started

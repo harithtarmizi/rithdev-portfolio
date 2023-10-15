@@ -4,7 +4,7 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,7 +20,8 @@ import web6 from "../../../public/web6.png";
 // import logo from "../../../public/rith.png";
 
 const Home = () => {
-  const sectionRef = useRef<HTMLDivElement | null>();
+  const contactRef = useRef<HTMLDivElement | null>();
+
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const {
     register,
@@ -54,10 +55,14 @@ const Home = () => {
     },
   });
 
-  // check if still use
-  // const scrollToSection = () => {
-  //   sectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  // };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      if (hash === "#contact" && contactRef.current) {
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -68,7 +73,7 @@ const Home = () => {
               {/* <Image
                 src={logo}
                 className="h-8 mr-3"
-                alt="Flowbite Logo"
+                alt="rithdev"
                 width={32}
                 height={32}
               /> */}
@@ -82,12 +87,6 @@ const Home = () => {
                 />
               </li>
               <li>
-                {/* <a
-                  onClick={scrollToSection}
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                >
-                  Contact now
-                </a> */}
                 <Link
                   href={"/portfolio/software-development"}
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
@@ -352,7 +351,10 @@ const Home = () => {
           </div>
         </section>
 
-        <section ref={sectionRef as React.RefObject<HTMLDivElement>}>
+        <section
+          id="#contact"
+          ref={contactRef as React.RefObject<HTMLDivElement>}
+        >
           <h3 className="text-3xl py-1 dark:text-white ">Contact</h3>
           <form onSubmit={handleSubmit(onSubmit)} className="mt-5 pb-10">
             <input
