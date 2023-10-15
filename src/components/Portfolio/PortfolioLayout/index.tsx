@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../../public/rith.png";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
 const PortfolioLayout = ({ children }: { children: ReactNode }) => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -9,8 +10,8 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
-          <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+        <nav className="bg-white border-gray-200 dark:text-white dark:bg-gray-900 pb-0 pt-10 sm:pb-10">
+          <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
             <Link href="/" className="flex items-center">
               <Image
                 src={logo}
@@ -24,36 +25,46 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
               </span>
             </Link>
             <div className="flex items-center md:order-2">
-              <Link
-                href="/"
-                className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600 focus:outline-none"
+              <ul className="flex items-center">
+                <li>
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer text-2xl"
+                  />
+                </li>
+                <li>
+                  <Link
+                    href={"/"}
+                    className="ml-8 text-white dark:text-black bg-gray-600 hover:bg-gray-800 font-medium rounded-lg px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600 focus:outline-none"
+                  >
+                    Home
+                  </Link>
+                </li>
+              </ul>
+              <button
+                data-collapse-toggle="mega-menu-icons"
+                type="button"
+                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="mega-menu-icons"
+                aria-expanded="false"
               >
-                Home
-              </Link>
-              {/* <button
-            data-collapse-toggle="mega-menu-icons"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mega-menu-icons"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button> */}
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
             </div>
             <div
               id="mega-menu-icons"
@@ -108,7 +119,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
               href="#"
               className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-gray-600 hover:bg-gray-800 focus:ring-4 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
             >
-              Get started 
+              Get started
               <svg
                 className="w-3.5 h-3.5 ml-2"
                 aria-hidden="true"

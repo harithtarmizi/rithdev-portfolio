@@ -42,7 +42,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
@@ -84,7 +84,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
@@ -126,7 +126,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
@@ -150,7 +150,7 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
-      <section className="py-10">
+      <section className="pb-10">
         <div>
           <h3 className="text-3xl py-1 dark:text-white ">Mobile apps</h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -183,7 +183,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
@@ -225,7 +225,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
@@ -267,7 +267,7 @@ const SoftwareDevelopment = () => {
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white dark:text-black bg-gray-600 rounded-lg hover:bg-gray-800 focus:outline-none dark:bg-white dark:hover:bg-white dark:focus:ring-gray-600"
               >
                 Demo project
                 <svg
