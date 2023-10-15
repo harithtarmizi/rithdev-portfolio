@@ -20,7 +20,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <nav className="bg-white border-gray-200 dark:text-white dark:bg-gray-900 pb-0 pt-10 sm:pb-10">
-          <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+          <div className="flex flex-wrap items-center justify-between mx-auto">
             <Link href="/" className="flex items-center">
               <Image
                 src={logo}
