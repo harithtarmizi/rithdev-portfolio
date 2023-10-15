@@ -1,13 +1,13 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useDarkMode from "@/store/darkmode";
 import { useRouter } from "next/router";
-
-import logo from "../../../../public/rith.png";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import logo from "../../../../public/rith.png";
 
 const PortfolioLayout = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const router = useRouter();
 
@@ -36,7 +36,7 @@ const PortfolioLayout = ({ children }: { children: ReactNode }) => {
               <ul className="flex items-center">
                 <li>
                   <BsFillMoonStarsFill
-                    onClick={() => setDarkMode(!darkMode)}
+                    onClick={toggleDarkMode}
                     className="cursor-pointer text-2xl"
                   />
                 </li>
