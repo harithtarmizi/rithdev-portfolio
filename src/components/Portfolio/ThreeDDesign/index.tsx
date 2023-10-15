@@ -6,7 +6,7 @@ const ThreeDDesign = () => {
     <PortfolioLayout>
       <section className="py-10">
         <div>
-          <h3 className="text-3xl py-1 dark:text-white ">Portfolio</h3>
+          <h3 className="text-3xl py-1 dark:text-white ">Blender 3D</h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             Welcome to my enchanted digital playground, where creativity meets
             code, and imagination knows no bounds. Explore my world of AR
@@ -22,7 +22,7 @@ const ThreeDDesign = () => {
             title="Augmented Reality (AR) Project"
             description="Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order."
-            buttonLabel="Explore more"
+            buttonLabel="Demo project"
           />
           <ProjectCard
             linkTo="/portfolio/software-development"
@@ -30,7 +30,7 @@ const ThreeDDesign = () => {
             title="Augmented Reality (AR) Project"
             description="Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order."
-            buttonLabel="Explore more"
+            buttonLabel="Demo project"
           />
           <ProjectCard
             linkTo="/portfolio/3d-design"
@@ -38,7 +38,7 @@ const ThreeDDesign = () => {
             title="3D Character Design Project"
             description="Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order."
-            buttonLabel="Explore more"
+            buttonLabel="Demo project"
           />
         </div>
       </section>
