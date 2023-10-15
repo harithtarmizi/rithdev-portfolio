@@ -370,7 +370,7 @@ const Home = () => {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900 focus:ring-4 focus:ring-transparent  ${
                   errors.name
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
@@ -396,7 +396,7 @@ const Home = () => {
                 type="email"
                 placeholder="Email Address"
                 autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900 focus:ring-4 focus:ring-transparent ${
                   errors.email
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
@@ -419,7 +419,7 @@ const Home = () => {
             <div className="mb-3">
               <textarea
                 placeholder="Your Message"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900 rounded-md outline-none h-36 focus:ring-4 focus:ring-transparent ${
                   errors.message
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
